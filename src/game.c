@@ -318,8 +318,7 @@ static void gameevent(const SDL_Event *e)
 			if(s_chain[i >> 3] & (1 << (i & 7))) {
 				if(gpos == NPOS) {
 					gpos = i;
-				}
-				else if(s_grid[i] != s_grid[gpos]) {
+				} else if(s_grid[i] != s_grid[gpos]) {
 					memset(s_chain, 0, sizeof(s_chain));
 					s_incorrect++;
 					break;
@@ -562,8 +561,7 @@ static void drawmenu()
 
 	if(s_hover == EASY) {
 		SDL_SetRenderDrawColor(s_renderer, 0x77, 0x77, 0x77, 0xFF);
-	}
-	else {
+	} else {
 		SDL_SetRenderDrawColor(s_renderer, 0x55, 0x55, 0x55, 0xFF);
 	}
 
@@ -579,8 +577,7 @@ static void drawmenu()
 
 	if(s_hover == MEDIUM) {
 		SDL_SetRenderDrawColor(s_renderer, 0x77, 0x77, 0x77, 0xFF);
-	}
-	else {
+	} else {
 		SDL_SetRenderDrawColor(s_renderer, 0x55, 0x55, 0x55, 0xFF);
 	}
 
@@ -596,8 +593,7 @@ static void drawmenu()
 
 	if(s_hover == HARD) {
 		SDL_SetRenderDrawColor(s_renderer, 0x77, 0x77, 0x77, 0xFF);
-	}
-	else {
+	} else {
 		SDL_SetRenderDrawColor(s_renderer, 0x55, 0x55, 0x55, 0xFF);
 	}
 
@@ -643,21 +639,17 @@ static void drawgrid()
 
 		if(found) {
 			SDL_SetRenderDrawColor(s_renderer, 0x10, 0xAA, 0x10, 0xFF);
-		}
-		else if(badchain() && chain) {
+		} else if(badchain() && chain) {
 			SDL_SetRenderDrawColor(s_renderer, 0xFF, 0x00, 0x00, 0xFF);
-		}
-		else if(i == s_hover && !chain) {
+		} else if(i == s_hover && !chain) {
 			SDL_SetRenderDrawColor(s_renderer, 0x77, 0x77, 0x77, 0xFF);
-		}
-		else {
+		} else {
 			SDL_SetRenderDrawColor(s_renderer, 0x55, 0x55, 0x55, 0xFF);
 		}
 
 		if(chain || found) {
 			drawinset(dst.x, dst.y, dst.w, dst.h);
-		}
-		else {
+		} else {
 			drawoutset(dst.x, dst.y, dst.w, dst.h);
 		}
 
@@ -688,8 +680,7 @@ void gdraw()
 	SDL_SetRenderDrawColor(s_renderer, 0x77, 0x77, 0x77, 0xFF);
 	SDL_RenderClear(s_renderer);
 
-	switch(s_state)
-	{
+	switch(s_state) {
 	case STATE_MENU:
 		drawmenu();
 		break;
