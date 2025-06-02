@@ -1,0 +1,7 @@
+[submodule "3rdparty/sdl2"]
+	path = 3rdparty/sdl2
+	url = https://github.com/libsdl-org/SDL
+	branch = SDL2
+[submodule "3rdparty/stb"]
+	path = 3rdparty/stb
+	url = https://github.com/nothings/stb
