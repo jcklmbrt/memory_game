@@ -31,7 +31,7 @@ enum state {
 	STATE_WON
 };
 
-enum difficuty {
+enum difficulty {
 	EASY = 4,
 	MEDIUM = 6,
 	HARD = 9
